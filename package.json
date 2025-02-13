@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage": "https://github.com/Datzke21/it35-lab.git",
+  "homepage": "https://datzke21.github.io/it35-lab/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
