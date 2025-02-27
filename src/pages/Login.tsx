@@ -1,10 +1,16 @@
 import { 
+    IonAvatar,
     IonButton,
     IonButtons,
       IonContent, 
       IonHeader, 
+      IonInput,
+      IonInputPasswordToggle,
+      IonItem,
+      IonList,
       IonMenuButton, 
       IonPage, 
+      IonText,
       IonTitle, 
       IonToolbar, 
       useIonRouter
@@ -26,6 +32,17 @@ import {
             <IonTitle>Login</IonTitle>
           </IonToolbar>
         </IonHeader>
+
+        <IonAvatar>
+          
+        </IonAvatar>
+
+        <IonList>
+          <IonItem>
+            <IonInput placeholder='Username'></IonInput>
+            <IonInput placeholder='Password'></IonInput>
+          </IonItem>
+        </IonList>
         <IonContent className='ion-padding'>
             <IonButton onClick={() => doLogin()} expand='full'>
                 login
