@@ -19,6 +19,10 @@ import {
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>
+        <section id="Favorites">
+          <h1>Welcome to my Favorites</h1>
+          <p>This is my Favorites Page</p>
+        </section>
         <div
             style={{
               display: 'flex',

@@ -7,6 +7,7 @@ import {
       IonInput,
       IonInputPasswordToggle,
       IonItem,
+      IonLabel,
       IonList,
       IonMenuButton, 
       IonPage, 
@@ -39,7 +40,11 @@ import {
 
         <IonList>
           <IonItem>
+          <label>UserName</label>
+            <input type="text" name="User Name"></input>
             <IonInput placeholder='Username'></IonInput>
+            <label>Password</label>
+            <input type="password" name="Password"></input>
             <IonInput placeholder='Password'></IonInput>
           </IonItem>
         </IonList>
