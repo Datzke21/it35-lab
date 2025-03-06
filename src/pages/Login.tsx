@@ -15,7 +15,8 @@ import {
       IonText,
       IonTitle, 
       IonToolbar, 
-      useIonRouter
+      useIonRouter,
+      IonImg,
   } from '@ionic/react';
   import { eye, lockClosed} from 'ionicons/icons';
   const login: React.FC = () => {
@@ -36,18 +37,18 @@ import {
         </IonHeader>
 
         <IonAvatar>
-          
+        <img alt="daryk" src="./img12.png"/>
         </IonAvatar>
 
         <IonList>
       <IonItem>
-        <IonInput labelPlacement="stacked" label="Email" placeholder="Email">
+        <IonInput labelPlacement="stacked" label="" placeholder="Email">
           <IonIcon slot="start" icon={lockClosed} aria-hidden="true"></IonIcon>
           <IonButton fill="clear" slot="end" aria-label="Show/hide">
             <IonIcon slot="icon-only" name={eye} aria-hidden="true"></IonIcon>
           </IonButton>
         </IonInput>
-        <IonInput type="password" label="Password" value="Never Gonna Give you up">
+        <IonInput placeholder="Password" label="">
           <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
         </IonInput>
       </IonItem>
@@ -62,3 +63,4 @@ import {
   };
   
   export default login;
+  
