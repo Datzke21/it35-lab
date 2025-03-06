@@ -1,5 +1,4 @@
 import { 
-    IonAvatar,
     IonIcon,
     IonButton,
     IonButtons,
@@ -19,6 +18,7 @@ import {
       IonImg,
   } from '@ionic/react';
   import { eye, lockClosed} from 'ionicons/icons';
+  import { IonAvatar } from '@ionic/react';
   const login: React.FC = () => {
     const navigation = useIonRouter();
 
@@ -37,9 +37,8 @@ import {
         </IonHeader>
 
         <IonAvatar>
-        <img alt="daryk" src="./img12.png"/>
-        </IonAvatar>
-
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </IonAvatar>           
         <IonList>
       <IonItem>
         <IonInput labelPlacement="stacked" label="" placeholder="Email">
