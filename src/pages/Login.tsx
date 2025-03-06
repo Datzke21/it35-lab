@@ -1,4 +1,6 @@
 import { 
+  IonAlert,
+  IonAvatar,
     IonIcon,
     IonButton,
     IonButtons,
@@ -15,10 +17,8 @@ import {
       IonTitle, 
       IonToolbar, 
       useIonRouter,
-      IonImg,
   } from '@ionic/react';
   import { eye, lockClosed} from 'ionicons/icons';
-  import { IonAvatar } from '@ionic/react';
   const login: React.FC = () => {
     const navigation = useIonRouter();
 
@@ -33,7 +33,7 @@ import {
               <IonMenuButton></IonMenuButton>
             </IonButtons>
             <IonTitle>Login</IonTitle>
-          </IonToolbar>
+          </IonToolbar> 
         </IonHeader>
 
         <IonAvatar>
