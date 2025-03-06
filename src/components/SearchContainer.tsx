@@ -26,7 +26,7 @@ function SearchContainer() {
 
   return (
     <>
-      <IonSearchbar color="primary" placeholder="Primary"></IonSearchbar>
+      <IonSearchbar debounce={1000} onIonInput={(event) => handleInput(event)}></IonSearchbar>
 
       <IonList>
         {results.map((result) => (
