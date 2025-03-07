@@ -1,11 +1,14 @@
 import { 
     IonButtons,
       IonContent, 
+      IonItem,
+      IonLabel,
       IonHeader, 
       IonMenuButton, 
       IonPage, 
       IonTitle, 
-      IonToolbar 
+      IonToolbar,
+      IonList
   } from '@ionic/react';
   const Favorites: React.FC = () => {
     return (
@@ -18,24 +21,18 @@ import {
             <IonTitle>Favorites</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonContent fullscreen>
-          <center>
-          <section id="Favorites">
-          <h1>Welcome to my Favorites</h1>
-          <p>This is my Favorites Page</p>
-        </section>
-          </center>
-      
-        <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              height: '100%',
-            }}
-          >
-            Favorites
-          </div>
+        <IonContent color="Light Blue">
+          <IonList inset={true}>
+          <IonItem>
+            <IonLabel>One Piece</IonLabel>
+          </IonItem>
+          <IonItem>
+          <IonLabel>Dragonn Ball</IonLabel>
+        </IonItem>
+        <IonItem>
+          <IonLabel>Hunter x Hunter</IonLabel>
+        </IonItem>
+          </IonList>
         </IonContent>
       </IonPage>
     );
