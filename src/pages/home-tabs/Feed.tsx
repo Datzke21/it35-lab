@@ -1,6 +1,11 @@
 import { 
+  IonAvatar,
   IonButton,
     IonButtons,
+    IonIcon,
+    IonItem,
+    IonText,
+    IonList,
       IonCard,
       IonCardContent,
       IonCardSubtitle,
@@ -10,8 +15,10 @@ import {
       IonMenuButton, 
       IonPage, 
       IonTitle, 
-      IonToolbar 
+      IonToolbar, 
+      IonLabel
   } from '@ionic/react';
+  import { chatbubbleEllipsesOutline, ellipsisHorizontal, heart, paperPlaneOutline } from 'ionicons/icons';
   const Feed: React.FC = () => {
     return (
 
@@ -25,6 +32,18 @@ import {
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>
+        <IonList lines='none'>
+          <IonItem className='ion-margin-top'>
+            <IonAvatar slot='start'>
+            <img alt="Sample" src="https://tse1.mm.bing.net/th?id=OIP.rX298mOw30d82kcPsL9cxgHaEK&pid=Api&P=0&h=180qzytdg8xliuaelun.jpg"/>
+            </IonAvatar>
+            <IonLabel>
+              <IonText>
+                One piece
+              </IonText>
+            </IonLabel>
+          </IonItem>
+        </IonList>
           <IonCard
 >         <IonHeader>
           <IonCardTitle>One Piece</IonCardTitle>

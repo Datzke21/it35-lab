@@ -37,7 +37,7 @@ import {
         </IonHeader>
 
         <IonAvatar>
-        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        <img alt="Sample" src="https://tse1.mm.bing.net/th?id=OIP.rX298mOw30d82kcPsL9cxgHaEK&pid=Api&P=0&h=180qzytdg8xliuaelun.jpg"></img>
         </IonAvatar>           
         <IonList>
       <IonItem>
