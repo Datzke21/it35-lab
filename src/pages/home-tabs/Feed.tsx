@@ -1,11 +1,10 @@
 import { 
-  IonButton, 
-  IonCard, 
-  IonCardContent,
-  IonCardHeader, 
-  IonCardSubtitle,
-   IonCardTitle,
+  IonButton,
     IonButtons,
+      IonCard,
+      IonCardContent,
+      IonCardSubtitle,
+      IonCardTitle,
       IonContent, 
       IonHeader, 
       IonMenuButton, 
@@ -15,18 +14,33 @@ import {
   } from '@ionic/react';
   const Feed: React.FC = () => {
     return (
+
+      <IonPage>
+        <IonHeader>
+          <IonToolbar>
+            <IonButtons slot='start'>
+              <IonMenuButton></IonMenuButton>
+            </IonButtons>
+            <IonTitle>Feed</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <IonContent fullscreen>
+          <IonCard
+>         <IonHeader>
+          <IonCardTitle>One Piece</IonCardTitle>
+          <IonCardSubtitle>Zoro</IonCardSubtitle>
+      </IonHeader>
       
-      <IonCard color="white">
-      <IonCardHeader>
-        <IonCardTitle>One piece</IonCardTitle>
-        <IonCardSubtitle></IonCardSubtitle>
-      </IonCardHeader>
+      <IonCardContent>"Only those who have suffered long, can see the light within the shadows." – Roronoa Zoro
 
-      <IonCardContent>Only those who have suffered long, can see the light within the shadows." – Roronoa Zoro</IonCardContent>
+        <IonButton fill='clear'>Action1</IonButton>
+        
+        <IonButton fill='clear'>Action2</IonButton>
 
-      <IonButton fill="clear">Action 1</IonButton>
-      <IonButton fill="clear">Action 2</IonButton>
-    </IonCard>
+      </IonCardContent>
+  </IonCard>        
+  </IonContent>
+      </IonPage>
     );
   };
   export default Feed;
