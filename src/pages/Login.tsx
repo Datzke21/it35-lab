@@ -19,7 +19,7 @@ import {
       useIonRouter,
   } from '@ionic/react';
   import { eye, lockClosed} from 'ionicons/icons';
-  const login: React.FC = () => {
+  const Login: React.FC = () => {
     const navigation = useIonRouter();
 
     const doLogin = () => {
@@ -74,10 +74,14 @@ import {
             <IonButton onClick={() => doLogin()} expand='full'>
                 login
             </IonButton>
+            <IonButton onClick={() => doLogin()} expand='full'>
+                Signup
+            </IonButton>
+
         </IonContent>
       </IonPage>
     );
   };
   
-  export default login;
+  export default Login;
   
