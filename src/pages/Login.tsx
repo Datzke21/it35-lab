@@ -63,7 +63,7 @@ import { useState } from 'react';
                        display: 'flex',
                        alignItems: 'center',
                        justifyContent: 'center',
-                     }}>Login</h1>
+                     }}>User</h1>
                    <IonInput
                      label="Email" 
                      labelPlacement="floating" 
