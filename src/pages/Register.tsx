@@ -131,7 +131,7 @@ import React, { useState } from 'react';
                              }}
                              className="ion-padding">
                              <IonCardHeader>
-                                 <IonCardTitle><h3>User Registration Details</h3></IonCardTitle>
+                                 <IonCardTitle><h3>User Registration</h3></IonCardTitle>
                                  <hr></hr>
  
                                  <IonCardSubtitle>Username</IonCardSubtitle>

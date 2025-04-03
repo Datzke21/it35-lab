@@ -22,7 +22,7 @@ import { useState } from 'react';
     const [showToast, setShowToast] = useState(true);
 
     const doLogin = async () => {
-      if (email === "Daryl@gamil.com" && password === "123456") {
+      if (email === "20191832@gmail.com" && password === "123456") {
         setShowToast(true);
         setTimeout(() => {
           navigation.push('/it35-lab/app', 'forward', 'replace');
@@ -106,7 +106,7 @@ import { useState } from 'react';
                  <IonToast
                    isOpen={showToast}
                    onDidDismiss={() => setShowToast(false)}
-                   message="Login successful! Redirecting..."
+                   message="Login successful!"
                    duration={1500}
                    position="top"
                    color="primary"
