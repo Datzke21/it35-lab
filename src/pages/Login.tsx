@@ -71,7 +71,7 @@ const Login: React.FC = () => {
             labelPlacement="floating"
             fill="outline"
             type="email"
-            placeholder="Enter Email"
+            placeholder="20191832@nbsc.edu.ph"
             value={email}
             onIonChange={e => setEmail(e.detail.value!)}
           />
@@ -80,7 +80,7 @@ const Login: React.FC = () => {
           }}
             fill="outline"
             type="password"
-            placeholder="Enter Password"
+            placeholder="Password"
             value={password}
             onIonChange={e => setPassword(e.detail.value!)}
           ><IonInputPasswordToggle slot="end"></IonInputPasswordToggle></IonInput>
