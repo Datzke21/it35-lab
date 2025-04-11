@@ -20,9 +20,9 @@ import bcrypt from 'bcryptjs';
 
 const Register: React.FC = () => {
     const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [showVerificationModal, setShowVerificationModal] = useState(false);
@@ -38,7 +38,6 @@ const Register: React.FC = () => {
             alert("Passwords do not match.");
             return;
         }
-
         setShowVerificationModal(true);
     };
 
@@ -81,6 +80,7 @@ const Register: React.FC = () => {
 
     return (
         <IonPage>
+
             <IonContent className='ion-padding'>
                 <h1>Create your account</h1>
 
@@ -141,14 +141,13 @@ const Register: React.FC = () => {
                     labelPlacement="stacked"
                     fill="outline"
                     type="password"
-                    placeholder="Confirm password"
+                    placeholder="Confirm Password"
                     value={confirmPassword}
                     onIonChange={e => setConfirmPassword(e.detail.value!)}
                     style={{ marginTop: '15px' }}
                 >
                     <IonInputPasswordToggle slot="end" />
                 </IonInput>
-
                 <IonButton onClick={handleOpenVerificationModal} expand="full" shape='round' style={{ marginTop: '15px' }}>
                     Register
                 </IonButton>
@@ -172,6 +171,7 @@ const Register: React.FC = () => {
                                 <IonCardSubtitle>Name</IonCardSubtitle>
                                 <IonCardTitle>{firstName} {lastName}</IonCardTitle>
                             </IonCardHeader>
+
                             <IonCardContent>
                             </IonCardContent>
                             <div style={{ display: 'flex', justifyContent: 'flex-end', marginRight: '5px' }}>
@@ -179,6 +179,7 @@ const Register: React.FC = () => {
                                 <IonButton color="primary" onClick={doRegister}>Confirm</IonButton>
                             </div>
                         </IonCard>
+
                     </IonContent>
                 </IonModal>
 
@@ -191,10 +192,10 @@ const Register: React.FC = () => {
                         alignItems: 'center',
                         height: '100vh',
                         textAlign: 'center',
-                        marginTop:'35%'
+                        marginTop: '35%'
                     }}>
                         <IonTitle style={{
-                            marginTop:'35%'
+                            marginTop: '35%'
                         }}>Registration Successful 🎉</IonTitle>
                         <IonText>
                             <p>Your account has been created successfully.</p>
@@ -209,5 +210,4 @@ const Register: React.FC = () => {
         </IonPage>
     );
 };
-
 export default Register;
