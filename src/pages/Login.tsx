@@ -8,11 +8,13 @@ import {
   IonInputPasswordToggle,
   IonPage,
   IonToast,
+  IonModal,
   useIonRouter
 } from '@ionic/react';
 import { happyOutline } from 'ionicons/icons';
 import { useState } from 'react';
 import { supabase } from '../utils/supabaseClient';
+import logo from '../assets/itachi.jpg';
 
 const Login: React.FC = () => {
   const navigation = useIonRouter();
@@ -39,33 +41,24 @@ const Login: React.FC = () => {
     <IonPage>
       <IonContent className='ion-padding'>
         <div style={{
+          backgroundImage: `url(${logo})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
           marginTop: '19%'
         }}>
-          <IonAvatar
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '150px',
-              height: '150px',
-              borderRadius: '50%',
-              overflow: 'hidden'
-            }}>
-            <IonIcon
-              icon={happyOutline}
-              color='primary'
-              style={{ fontSize: '120px', color: '#6c757d' }}
-            />
+          <IonAvatar style={{ width: '260px', height: '260px', marginBottom: '15px', border: '4px solidrgb(100, 5, 5)' }}>
+            <img alt="itachi.jpg" src={logo} />
           </IonAvatar>
           <h1 style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-          }}>Welcome!</h1>
+          }}>Welcome Back Ninja! </h1>
           <IonInput
             label="Email"
             labelPlacement="floating"
@@ -85,7 +78,13 @@ const Login: React.FC = () => {
             onIonChange={e => setPassword(e.detail.value!)}
           ><IonInputPasswordToggle slot="end"></IonInputPasswordToggle></IonInput>
         </div>
-        <IonButton onClick={doLogin} expand="full" shape='round'>
+        <IonButton onClick={doLogin} expand="block" shape='round' color='warnng'
+        style={{
+          marginTop: '20px',
+                fontWeight: 'bold',
+                letterSpacing: '1px',
+                background: 'linear-gradient(to right,rgb(255, 21, 0),rgb(226, 12, 8))',
+        }}>
           Login
         </IonButton>
 
