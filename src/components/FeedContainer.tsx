@@ -26,6 +26,7 @@ import { supabase } from '../utils/supabaseClient';
 import { User } from '@supabase/supabase-js';
 import { pencil, trash } from 'ionicons/icons';
 
+
 interface Post {
   post_id: string;
   user_id: number;
@@ -132,38 +133,76 @@ const FeedContainer = () => {
   return (
     <div style={{ marginTop: '1rem' }}>
       {user && (
-        <IonCard style={{ borderRadius: '16px', boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)' }}>
+        <IonCard 
+        style={{ 
+          borderRadius: '16px', 
+          background: 'rgba(255, 0, 0, 0.2)', // Semi-transparent red
+          backdropFilter: 'blur(10px)',        // Frosted glass effect
+          boxShadow: '0 8px 32px 0 rgba(255, 0, 0, 0.37)', // Softer shadow matching red tone
+          border: '1px solid rgba(255, 255, 255, 0.18)'    // Glassy border
+        }}
+      >
+      
           <IonCardHeader>
-            <IonCardTitle style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>📝 Share Your Thoughts</IonCardTitle>
+            <IonCardTitle style={{ fontSize: '1.2rem', fontWeight: 'bold', borderRadius: '16px', 
+          background: 'rgba(255, 0, 0, 0.2)', // Semi-transparent red
+          backdropFilter: 'blur(10px)',        // Frosted glass effect
+          boxShadow: '0 8px 32px 0 rgba(255, 0, 0, 0.37)', // Softer shadow matching red tone
+          border: '1px solid rgba(255, 255, 255, 0.18)' }}>📝 Comment Your Thought's </IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
-            <IonInput
-              value={postContent}
-              onIonChange={e => setPostContent(e.detail.value!)}
-              placeholder="Write something interesting..."
-              style={{
-                border: '1px solid #ddd',
-                borderRadius: '8px',
-                padding: '12px',
-                background: 'white',
-                marginBottom: '12px',
-                fontSize: '1rem'
-              }}
-            />
-            <IonButton
-              expand="block"
-              onClick={createPost}
-              disabled={!postContent.trim()}
-              style={{ backgroundColor: '#3880ff', color: 'white' }}
-            >
-              ✨ Post
-            </IonButton>
+          <IonInput
+  value={postContent}
+  onIonChange={e => setPostContent(e.detail.value!)}
+  placeholder="What's In Your Mind?"
+  style={{
+    border: '1px solid rgba(255, 255, 255, 0.3)', // lighter border
+    borderRadius: '12px',
+    padding: '12px',
+    background: 'rgba(255, 255, 255, 0.2)',       // glassy white background
+    backdropFilter: 'blur(8px)',                  // frosted blur
+    color: 'white',                               // text color white
+    marginBottom: '12px',
+    fontSize: '1rem',
+    boxShadow: '0 4px 10px rgba(255, 0, 0, 0.2)',  // red-ish shadow glow
+  }}
+/>
+
+<IonButton
+  expand="block"
+  onClick={createPost}
+  disabled={!postContent.trim()}
+  style={{
+    background: 'rgba(255, 0, 0, 0.25)', // light transparent red
+    color: 'red',
+    borderRadius: '12px',
+    backdropFilter: 'blur(8px)',         // glassy blur
+    border: '1px solid rgba(255, 255, 255, 0.2)', // frosty border
+    boxShadow: '0 4px 15px rgba(255, 0, 0, 0.4)', // red glow
+    fontWeight: 'bold',
+    letterSpacing: '0.5px'
+  }}
+>
+  ✨ Post
+</IonButton>
+
           </IonCardContent>
         </IonCard>
       )}
 
       {posts.map(post => (
-        <IonCard key={post.post_id} style={{ marginTop: '1.5rem', borderRadius: '20px', boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)' }}>
+        <IonCard
+        key={post.post_id}
+        style={{
+          marginTop: '1.5rem',
+          borderRadius: '20px',
+          background: 'rgba(255, 0, 0, 0.15)',     // light red transparent
+          boxShadow: '0 8px 20px rgba(255, 0, 0, 0.3)', // stronger red glow
+          backdropFilter: 'blur(10px)',             // glassy blur effect
+          border: '1px solid rgba(255, 255, 255, 0.2)', // thin frosty border
+        }}
+      >
+      
           <IonCardHeader>
             <IonRow>
               <IonCol size="auto">

@@ -28,14 +28,13 @@ const Feed: React.FC = () => {
       <IonContent fullscreen color="light">
         <div style={{ padding: '16px' }}>
           <IonCard className="ion-activatable ripple-parent">
-            <IonCardHeader>
-              <IonCardTitle>Welcome to your feed</IonCardTitle>
-            </IonCardHeader>
-            <IonCardContent>
+          
+            
+            
               <IonText color="medium">
-                Here's where you’ll see your latest updates.
+               
               </IonText>
-            </IonCardContent>
+        
           </IonCard>
 
           <FeedContainer />

@@ -11,10 +11,10 @@ import {
   IonModal,
   useIonRouter
 } from '@ionic/react';
-import { happyOutline } from 'ionicons/icons';
 import { useState } from 'react';
 import { supabase } from '../utils/supabaseClient';
-import logo from '../assets/itachi.jpg';
+import logo from '../assets/sharingan.gif';
+
 
 const Login: React.FC = () => {
   const navigation = useIonRouter();
@@ -41,20 +41,18 @@ const Login: React.FC = () => {
     <IonPage>
       <IonContent className='ion-padding'>
         <div style={{
-          backgroundImage: `url(${logo})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
           marginTop: '19%'
         }}>
-          <IonAvatar style={{ width: '260px', height: '260px', marginBottom: '15px', border: '4px solidrgb(100, 5, 5)' }}>
-            <img alt="itachi.jpg" src={logo} />
+          <IonAvatar style={{ width: '260px', height: '260px', marginBottom: '15px', border: '4px solid rgb(231, 16, 16)' }}>
+            <img alt="fullmoon.jpg" src={logo} />
           </IonAvatar>
           <h1 style={{
+            
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
