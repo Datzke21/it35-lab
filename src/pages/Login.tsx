@@ -22,7 +22,7 @@ import { useState } from 'react';
     const [showToast, setShowToast] = useState(true);
 
     const doLogin = async () => {
-      if (email === "Daryl@gamil.com" && password === "123456") {
+      if (email === "20191832@nbsc.edu.ph" && password === "123456") {
         setShowToast(true);
         setTimeout(() => {
           navigation.push('/it35-lab/app', 'forward', 'replace');
